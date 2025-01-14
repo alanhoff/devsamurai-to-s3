@@ -31,7 +31,7 @@ JSON="[]"
             '. += [ { name: $name, url: $url, size: $size } ]')
 
     fi
-done < <(curl https://class.devsamurai.com.br | grep -E -io 'href="[^\"]+"' | awk -F\" '{print$2}' | grep ".zip" | tail -n2)
+done < <(curl https://class.devsamurai.com.br | grep -E -io 'href="[^\"]+"' | awk -F\" '{print$2}' | grep ".zip")
 
 # Generate index file
 export JSON=$JSON
