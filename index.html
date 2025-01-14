@@ -152,7 +152,7 @@
         const shaBadge = document.createElement("span");
         shaBadge.className = "badge rounded-pill badge-sha";
         shaBadge.textContent = "SHA256";
-        shaBadge.onclick = () => downloadSha(file.sha256);
+        shaBadge.onclick = () => downloadSha(`${file.url}.sha256`);
         // Append badges to the badge container
         badgeContainer.appendChild(fileSizeBadge);
         badgeContainer.appendChild(shaBadge);
